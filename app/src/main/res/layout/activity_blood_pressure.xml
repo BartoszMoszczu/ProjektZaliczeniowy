@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".BloodPressureActivity">
+
+    <EditText
+        android:id="@+id/systolicEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź ciśnienie skurczowe" />
+
+    <EditText
+        android:id="@+id/diastolicEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź ciśnienie rozkurczowe" />
+
+    <RadioGroup
+        android:id="@+id/timeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/morningRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pomiar poranny" />
+
+        <RadioButton
+            android:id="@+id/eveningRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pomiar wieczorny" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="187dp"
+            android:layout_height="match_parent"
+            android:text="Zatwierdź pomiar" />
+
+        <Button
+            android:id="@+id/toTableButton"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:text="Zobacz listę pomiarów" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backToFirestoreButton"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:text="Powrót" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
